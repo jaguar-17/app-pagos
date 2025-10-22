@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Secure Payments</h1>
-  <img src="./assets/securepayments.png" alt="Secure Payments Logo" width="150"/>
+  <img src="./assets/securepayments.png" alt="Secure Payments Logo" width="300"/>
 </div>
 
 ## 🧩 1️⃣ Definición del Proyecto
