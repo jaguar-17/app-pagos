@@ -1,4 +1,4 @@
-<div style="text-align: center">
+<div align="center">
   <h1>🧾 Backend - Sistema Web de Procesos de Pagos con Spring Boot y MySQL</h1>
 <img src="./assets/icons8-spring-boot-144.png" alt="SpringBoot" width="144"/>
 <img src="./assets/icons8-mysql-144.png" alt="MySQL" width="144"/>
