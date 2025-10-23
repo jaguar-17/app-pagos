@@ -1,4 +1,8 @@
-# 🧾 Backend - Sistema Web de Procesos de Pagos con Spring Boot y MySQL
+<div style="text-align: center">
+  <h1>🧾 Backend - Sistema Web de Procesos de Pagos con Spring Boot y MySQL</h1>
+<img src="./assets/icons8-spring-boot-144.png" alt="SpringBoot" width="144"/>
+<img src="./assets/icons8-mysql-144.png" alt="MySQL" width="144"/>
+</div>
 
 ## 📘 Descripción General
 El **Sistema Web de Procesos de Pagos** es una aplicación backend desarrollada con **Spring Boot** y **MySQL**, que permite registrar pagos, consultar el historial de transacciones y gestionar métodos de pago de manera modular y extensible.
@@ -19,15 +23,15 @@ El proyecto está diseñado como un caso académico para demostrar la correcta a
 ---
 
 ## ⚙️ Tecnologías Utilizadas
-| Componente | Tecnología |
-|-------------|-------------|
-| Lenguaje | Java 17 |
-| Framework | Spring Boot 3.x |
-| Base de Datos | MySQL 8 |
-| ORM | Spring Data JPA |
-| Herramienta de construcción | Maven |
-| IDE recomendado | IntelliJ IDEA / VSCode / Eclipse |
-| Control de versiones | Git |
+| Componente                  | Tecnología                       |
+|-----------------------------|----------------------------------|
+| Lenguaje                    | Java 17                          |
+| Framework                   | Spring Boot 3.x                  |
+| Base de Datos               | MySQL 8                          |
+| ORM                         | Spring Data JPA                  |
+| Herramienta de construcción | Maven                            |
+| IDE recomendado             | IntelliJ IDEA / VSCode / Eclipse |
+| Control de versiones        | Git                              |
 
 ---
 
@@ -55,22 +59,22 @@ Las dependencias de alto nivel (`PagoServiceImpl`, `PagoController`) se definen 
 
 ## 📋 Requerimientos Funcionales
 
-| Código | Descripción |
-|--------|--------------|
-| **RF1** | Registrar un pago: el sistema permite registrar un nuevo pago, indicando método, monto y usuario. |
-| **RF2** | Consultar historial de pagos: el usuario o administrador puede listar todos los pagos registrados. |
+| Código  | Descripción                                                                                               |
+|---------|-----------------------------------------------------------------------------------------------------------|
+| **RF1** | Registrar un pago: el sistema permite registrar un nuevo pago, indicando método, monto y usuario.         |
+| **RF2** | Consultar historial de pagos: el usuario o administrador puede listar todos los pagos registrados.        |
 | **RF3** | Agregar nuevos métodos de pago: el administrador puede agregar métodos sin modificar el código existente. |
 
 ---
 
 ## 🧱 Modelo de Datos (Entidades Principales)
 
-| Entidad | Descripción                                                      |
-|----------|------------------------------------------------------------------|
-| **Usuario** | Persona que realiza o administra pagos.                          |
-| **Rol** | Permite distinguir entre cliente y administrador.                |
+| Entidad        | Descripción                                                      |
+|----------------|------------------------------------------------------------------|
+| **Usuario**    | Persona que realiza o administra pagos.                          |
+| **Rol**        | Permite distinguir entre cliente y administrador.                |
 | **MetodoPago** | Define el tipo de pago (tarjeta, Yape, transferencia, etc.).     |
-| **Pago** | Transacción realizada por un usuario mediante un método de pago. |
+| **Pago**       | Transacción realizada por un usuario mediante un método de pago. |
 
 ---
 
@@ -110,10 +114,10 @@ http://localhost:8080
 
 ## 🚀 Endpoints Principales
 
-| Método | Endpoint            | Descripción | Ejemplo de Uso                                                            |
-|---------|---------------------|--------------|---------------------------------------------------------------------------|
-| `POST` | `/api/pagos`        | Registrar un nuevo pago (RF1) | `{ "monto": 150.5, "usuario": {"id":1}, "metodoPago": {"tipo": "yape"} }` |
-| `GET` | `/api/pagos`        | Consultar historial de pagos (RF2) | —                                                                         |
+| Método | Endpoint            | Descripción                        | Ejemplo de Uso                                                            |
+|--------|---------------------|------------------------------------|---------------------------------------------------------------------------|
+| `POST` | `/api/pagos`        | Registrar un nuevo pago (RF1)      | `{ "monto": 150.5, "usuario": {"id":1}, "metodoPago": {"tipo": "yape"} }` |
+| `GET`  | `/api/pagos`        | Consultar historial de pagos (RF2) | —                                                                         |
 | `POST` | `/api/metodos-pago` | Agregar nuevo método de pago (RF3) | `{ "tipo": "efectivo" }`                                                  |
 
 ---
@@ -122,11 +126,11 @@ http://localhost:8080
 
 1. **Crear método de pago (RF3):**
    ```json
-   POST /api/metodos
-   {
-     "tipo": "yape"
-   }
-   ```
+"POST" /api/metodos
+{
+  "tipo": "yape"
+}
+```
 2. **Registrar un pago (RF1):**
    ```json
    POST /api/pagos
@@ -136,7 +140,7 @@ http://localhost:8080
      "metodoPago": {"tipo": "yape"}
    }
    ```
-3. **Consultar historial (RF2):**
+1. **Consultar historial (RF2):**
    ```bash
    GET /api/pagos
    ```
@@ -170,8 +174,8 @@ public class PagoPlin implements MetodoPagoStrategy {
     }
 }
 ```
-2. Reiniciar la aplicación.
-3. Ya puedes registrar pagos con:
+1. Reiniciar la aplicación.
+2. Ya puedes registrar pagos con:
 ```json
 { "monto": 99.99, "usuario": {"id":1}, "metodoPago": {"tipo":"plin"} }
 ```
@@ -202,4 +206,4 @@ src/
 ## 🧑‍💻 Autor y Uso Académico
 Proyecto desarrollado con fines **académicos y demostrativos** como ejemplo de aplicación de los **principios SOLID** en un entorno web moderno.  
 Autor: **Solano Liberato Isaias Leandro**  
-Versión: **1.0.0 — Octubre 2025**
+Versión: **1.0.0 — octubre 2025**
